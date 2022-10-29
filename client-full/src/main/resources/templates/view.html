@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+		<a th:href="@{/add}">Them</a>
+	<h1>Danh sachs san pham</h1>
+	<table>
+		<tr>
+			<th>ID</th>
+			<th>Tên sach</th>
+			<th>Ma credit</th>
+			
+		</tr>
+		   <th:block th:each="book : ${list}">
+		<tr >
+			<td th:text="${book.SubId}"></td>
+			<td th:text="${book.name}"></td>
+			<td th:text="${book.creadit}"></td>
+		
+		</tr>
+		</th:block>
+	</table>
+</body>
+</html>
